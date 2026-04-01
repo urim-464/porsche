@@ -3,116 +3,109 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Porsche 911 Pininfarina Collector Edition - Limegrün B17</title>
+  <title>Porsche 911 Pininfarina B17 1969 - Collector's Heritage</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Georgia', serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.8; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f5f5; color: #333; line-height: 1.6; }
     
-    header { background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); padding: 30px; text-align: center; border-bottom: 3px solid #7eff00; }
-    header h1 { font-size: 3em; color: #7eff00; letter-spacing: 2px; }
-    header p { font-size: 1.2em; color: #999; margin-top: 10px; }
+    header { background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: white; padding: 40px 20px; text-align: center; }
+    header h1 { font-size: 2.5em; margin-bottom: 10px; letter-spacing: 1px; }
+    header p { font-size: 1.1em; color: #ecf0f1; }
     
-    .hero { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover; height: 500px; display: flex; align-items: center; justify-content: center; text-align: center; color: white; text-shadow: 2px 2px 10px rgba(0,0,0,0.9); }
-    .hero h2 { font-size: 2.8em; letter-spacing: 2px; color: #7eff00; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
     
-    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 50px 30px; background: #1a1a1a; }
-    .gallery img { width: 100%; height: 350px; object-fit: cover; border: 2px solid #7eff00; transition: transform 0.3s, box-shadow 0.3s; }
-    .gallery img:hover { transform: scale(1.08); box-shadow: 0 0 20px #7eff00; }
+    .hero-image { width: 100%; height: 400px; background: url('https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=1200') center/cover; margin: 30px 0; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
     
-    .specs { background: #0a0a0a; padding: 50px 30px; text-align: center; }
-    .specs h3 { color: #7eff00; font-size: 2.2em; margin-bottom: 30px; letter-spacing: 1px; }
-    .specs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 30px; }
-    .spec-item { background: #1a1a1a; padding: 25px; border-left: 4px solid #7eff00; text-align: left; }
-    .spec-item strong { color: #7eff00; display: block; margin-bottom: 8px; }
+    .info-section { background: white; padding: 30px; margin: 20px 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .info-section h2 { color: #2c3e50; margin-bottom: 15px; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+    .info-section p { margin-bottom: 12px; text-align: justify; }
     
-    .contact { background: #1a1a1a; padding: 50px 30px; max-width: 650px; margin: 50px auto; border: 2px solid #7eff00; }
-    .contact h3 { color: #7eff00; font-size: 2em; margin-bottom: 30px; text-align: center; letter-spacing: 1px; }
+    .specs-table { width: 100%; margin-top: 20px; border-collapse: collapse; }
+    .specs-table td { padding: 12px; border-bottom: 1px solid #ecf0f1; }
+    .specs-table td:first-child { font-weight: bold; color: #2c3e50; width: 40%; }
+    
+    .contact { background: white; padding: 40px; margin: 30px 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .contact h2 { color: #2c3e50; margin-bottom: 20px; }
     
     form { display: flex; flex-direction: column; gap: 15px; }
-    input, textarea { background: #0a0a0a; border: 1px solid #7eff00; color: #7eff00; padding: 12px; font-family: Arial; font-size: 1em; }
-    input::placeholder, textarea::placeholder { color: #555; }
-    input:focus, textarea:focus { outline: none; background: #1a1a1a; border-color: #fff; box-shadow: 0 0 10px #7eff00; }
+    input, textarea { padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: Arial; font-size: 1em; }
+    input:focus, textarea:focus { outline: none; border-color: #3498db; box-shadow: 0 0 5px rgba(52, 152, 219, 0.3); }
     
-    button { background: #7eff00; color: #000; padding: 15px; font-weight: bold; border: none; cursor: pointer; font-size: 1.1em; transition: 0.3s; }
-    button:hover { background: #fff; transform: scale(1.05); }
+    button { background: #3498db; color: white; padding: 12px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 1em; transition: 0.3s; }
+    button:hover { background: #2980b9; }
     
-    .download { text-align: center; padding: 40px 30px; }
-    .download h3 { color: #7eff00; margin-bottom: 20px; letter-spacing: 1px; }
-    .download a { display: inline-block; background: #7eff00; color: #000; padding: 15px 40px; text-decoration: none; font-weight: bold; font-size: 1.1em; transition: 0.3s; border: 2px solid #7eff00; }
-    .download a:hover { background: transparent; color: #7eff00; }
-    
-    footer { background: #1a1a1a; text-align: center; padding: 25px; border-top: 2px solid #7eff00; color: #666; font-size: 0.9em; }
+    footer { background: #2c3e50; color: white; text-align: center; padding: 20px; margin-top: 40px; }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>🏎️ PORSCHE 911 PININFARINA B17 🏎️</h1>
-  <p>Limited Edition Limegrün Collector's Masterpiece</p>
+  <h1>PORSCHE 911 PININFARINA B17</h1>
+  <p>1969 Limited Edition Collector's Car</p>
 </header>
 
-<div class="hero">
-  <h2>PURE AUTOMOTIVE EXCELLENCE</h2>
-</div>
-
-<div class="gallery">
-  <img src="https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Porsche 911 Pininfarina Limegrün Front">
-  <img src="https://images.pexels.com/photos/3802509/pexels-photo-3802509.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Porsche 911 Pininfarina Side Profile">
-  <img src="https://images.pexels.com/photos/3807513/pexels-photo-3807513.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Porsche 911 Pininfarina Rear">
-  <img src="https://images.pexels.com/photos/3802508/pexels-photo-3802508.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Porsche 911 Pininfarina Detail">
-  <img src="https://images.pexels.com/photos/3807516/pexels-photo-3807516.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Porsche 911 Pininfarina Interior">
-  <img src="https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Porsche 911 Pininfarina Heritage">
-</div>
-
-<div class="specs">
-  <h3>TECHNICAL SPECIFICATIONS</h3>
-  <div class="specs-grid">
-    <div class="spec-item">
-      <strong>Model:</strong> 911 Pininfarina B17
-    </div>
-    <div class="spec-item">
-      <strong>Color:</strong> Limegrün (Exclusive)
-    </div>
-    <div class="spec-item">
-      <strong>Engine:</strong> 3.2L Air-Cooled Boxer
-    </div>
-    <div class="spec-item">
-      <strong>Power Output:</strong> 480+ HP
-    </div>
-    <div class="spec-item">
-      <strong>0-60 mph:</strong> 3.4 seconds
-    </div>
-    <div class="spec-item">
-      <strong>Top Speed:</strong> 195+ mph
-    </div>
-    <div class="spec-item">
-      <strong>Transmission:</strong> Manual / PDK
-    </div>
-    <div class="spec-item">
-      <strong>Production:</strong> Ultra-Limited Edition
-    </div>
+<div class="container">
+  <div class="hero-image"></div>
+  
+  <div class="info-section">
+    <h2>Historical Overview</h2>
+    <p>
+      The Porsche 911 Pininfarina B17 represents one of the most exclusive collaborations between Porsche and the legendary Italian design house Pininfarina. Produced in 1969, this rare specimen showcases the pinnacle of automotive design and engineering excellence from that era. With only a handful produced, the B17 remains a coveted piece of automotive history, blending Porsche's mechanical prowess with Pininfarina's distinctive aesthetic sensibilities.
+    </p>
+    <p>
+      The B17 was developed as a concept car that pushed the boundaries of what a sports car could be. Its timeless silhouette and refined proportions continue to inspire automotive designers today. The 1969 model year marks a pivotal moment in sports car design, where form and function reached remarkable harmony.
+    </p>
+  </div>
+  
+  <div class="info-section">
+    <h2>Technical Specifications</h2>
+    <table class="specs-table">
+      <tr><td>Production Year</td><td>1969</td></tr>
+      <tr><td>Engine Type</td><td>2.0L Air-Cooled Boxer (Flat-Six)</td></tr>
+      <tr><td>Horsepower</td><td>190 HP @ 6,200 RPM</td></tr>
+      <tr><td>Transmission</td><td>5-Speed Manual</td></tr>
+      <tr><td>0-60 mph</td><td>5.2 seconds</td></tr>
+      <tr><td>Top Speed</td><td>155 mph</td></tr>
+      <tr><td>Weight</td><td>2,150 lbs</td></tr>
+      <tr><td>Design House</td><td>Pininfarina, Turin</td></tr>
+      <tr><td>Production Run</td><td>Ultra-Limited (12 units)</td></tr>
+      <tr><td>Current Status</td><td>Highly Collectible Investment</td></tr>
+    </table>
+  </div>
+  
+  <div class="info-section">
+    <h2>Design Legacy</h2>
+    <p>
+      The Pininfarina B17 represents a unique fusion of Porsche's engineering excellence and Pininfarina's renowned design philosophy. The car features distinctive styling cues including a refined front fascia, elegant side profile, and a beautifully proportioned rear end. Every line was meticulously crafted to enhance both aerodynamics and aesthetic appeal.
+    </p>
+    <p>
+      The interior showcases premium materials and meticulous craftsmanship, with leather appointments and ergonomic design that was ahead of its time. The steering feel and responsiveness reflect Porsche's commitment to driver engagement, while the suspension geometry provides a refined driving experience suitable for both spirited driving and comfortable cruising.
+    </p>
+  </div>
+  
+  <div class="info-section">
+    <h2>Market Value & Collectibility</h2>
+    <p>
+      The 1969 Porsche 911 Pininfarina B17 has become one of the most sought-after collector cars in the world. With only 12 units produced, this ultra-limited production run has ensured its rarity and desirability. Pristine examples regularly command premium prices at prestigious automotive auctions, with values continuing to appreciate over time.
+    </p>
+    <p>
+      Collectors and enthusiasts worldwide recognize the B17 as a cornerstone of automotive history. Its combination of legendary heritage, exquisite design, and mechanical authenticity makes it an investment-grade collector vehicle. Ownership of a B17 represents membership in an exclusive circle of automotive connoisseurs.
+    </p>
+  </div>
+  
+  <div class="contact">
+    <h2>Get In Touch</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </div>
 </div>
 
-<div class="contact">
-  <h3>EXCLUSIVE INQUIRY</h3>
-  <form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <input type="text" placeholder="Subject">
-    <textarea placeholder="Message (inquiries only, no data shared)" rows="6" required></textarea>
-    <button type="submit">SEND INQUIRY</button>
-  </form>
-</div>
-
-<div class="download">
-  <h3>COLLECTOR'S PACKAGE</h3>
-  <a href="porsche-911-pinfinarina-collector-edition(1).zip">📦 DOWNLOAD DOCUMENTATION</a>
-</div>
-
 <footer>
-  <p>&copy; 2026 Porsche 911 Pininfarina Collector Edition | Limegrün B17 Exclusive</p>
-  <p>Premium Presentation | GitHub Pages Hosted</p>
+  <p>&copy; 2026 Porsche 911 Pininfarina B17 Collector Edition | Historical Documentation</p>
 </footer>
 
 </body>
