@@ -1,112 +1,116 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Porsche 911 Pininfarina B17 1969 - Collector's Heritage</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f5f5; color: #333; line-height: 1.6; }
-    
-    header { background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: white; padding: 40px 20px; text-align: center; }
-    header h1 { font-size: 2.5em; margin-bottom: 10px; letter-spacing: 1px; }
-    header p { font-size: 1.1em; color: #ecf0f1; }
-    
-    .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
-    
-    .hero-image { width: 100%; height: 400px; background: url('https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=1200') center/cover; margin: 30px 0; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-    
-    .info-section { background: white; padding: 30px; margin: 20px 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-    .info-section h2 { color: #2c3e50; margin-bottom: 15px; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
-    .info-section p { margin-bottom: 12px; text-align: justify; }
-    
-    .specs-table { width: 100%; margin-top: 20px; border-collapse: collapse; }
-    .specs-table td { padding: 12px; border-bottom: 1px solid #ecf0f1; }
-    .specs-table td:first-child { font-weight: bold; color: #2c3e50; width: 40%; }
-    
-    .contact { background: white; padding: 40px; margin: 30px 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-    .contact h2 { color: #2c3e50; margin-bottom: 20px; }
-    
-    form { display: flex; flex-direction: column; gap: 15px; }
-    input, textarea { padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: Arial; font-size: 1em; }
-    input:focus, textarea:focus { outline: none; border-color: #3498db; box-shadow: 0 0 5px rgba(52, 152, 219, 0.3); }
-    
-    button { background: #3498db; color: white; padding: 12px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 1em; transition: 0.3s; }
-    button:hover { background: #2980b9; }
-    
-    footer { background: #2c3e50; color: white; text-align: center; padding: 20px; margin-top: 40px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porsche 911 B17 Pininfarina | One of One</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.9)), #0a0a0a;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background: #facc15;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
 </head>
-<body>
+<body class="bg-zinc-950 text-zinc-100">
 
-<header>
-  <h1>PORSCHE 911 PININFARINA B17</h1>
-  <p>1969 Limited Edition Collector's Car</p>
-</header>
+    <!-- HERO -->
+    <header class="hero-bg h-screen flex items-center justify-center text-center relative">
+        <div class="max-w-6xl mx-auto px-6 z-10">
+            <div class="inline-block bg-black/70 px-8 py-3 rounded-full mb-6 text-yellow-400 text-sm tracking-widest font-medium">
+                1969 • ONE OF ONE
+            </div>
+            <h1 class="text-6xl md:text-8xl font-bold tracking-tighter mb-4">PORSCHE 911 B17</h1>
+            <h2 class="text-4xl md:text-5xl font-light text-yellow-400 mb-8">PININFARINA PROTOTYPE</h2>
+            <p class="text-2xl md:text-3xl max-w-3xl mx-auto">Den enda fabriksbeställda fyrasitsiga 911:an i världen – ett unikt stycke Porsche-historia</p>
+            <a href="#kontakt" class="mt-16 inline-flex items-center gap-4 bg-yellow-400 hover:bg-amber-300 text-black font-semibold text-xl px-14 py-6 rounded-full transition-all">
+                <i class="fas fa-envelope"></i> Intresseanmälan
+            </a>
+        </div>
+    </header>
 
-<div class="container">
-  <div class="hero-image"></div>
-  
-  <div class="info-section">
-    <h2>Historical Overview</h2>
-    <p>
-      The Porsche 911 Pininfarina B17 represents one of the most exclusive collaborations between Porsche and the legendary Italian design house Pininfarina. Produced in 1969, this rare specimen showcases the pinnacle of automotive design and engineering excellence from that era. With only a handful produced, the B17 remains a coveted piece of automotive history, blending Porsche's mechanical prowess with Pininfarina's distinctive aesthetic sensibilities.
-    </p>
-    <p>
-      The B17 was developed as a concept car that pushed the boundaries of what a sports car could be. Its timeless silhouette and refined proportions continue to inspire automotive designers today. The 1969 model year marks a pivotal moment in sports car design, where form and function reached remarkable harmony.
-    </p>
-  </div>
-  
-  <div class="info-section">
-    <h2>Technical Specifications</h2>
-    <table class="specs-table">
-      <tr><td>Production Year</td><td>1969</td></tr>
-      <tr><td>Engine Type</td><td>2.0L Air-Cooled Boxer (Flat-Six)</td></tr>
-      <tr><td>Horsepower</td><td>190 HP @ 6,200 RPM</td></tr>
-      <tr><td>Transmission</td><td>5-Speed Manual</td></tr>
-      <tr><td>0-60 mph</td><td>5.2 seconds</td></tr>
-      <tr><td>Top Speed</td><td>155 mph</td></tr>
-      <tr><td>Weight</td><td>2,150 lbs</td></tr>
-      <tr><td>Design House</td><td>Pininfarina, Turin</td></tr>
-      <tr><td>Production Run</td><td>Ultra-Limited (12 units)</td></tr>
-      <tr><td>Current Status</td><td>Highly Collectible Investment</td></tr>
-    </table>
-  </div>
-  
-  <div class="info-section">
-    <h2>Design Legacy</h2>
-    <p>
-      The Pininfarina B17 represents a unique fusion of Porsche's engineering excellence and Pininfarina's renowned design philosophy. The car features distinctive styling cues including a refined front fascia, elegant side profile, and a beautifully proportioned rear end. Every line was meticulously crafted to enhance both aerodynamics and aesthetic appeal.
-    </p>
-    <p>
-      The interior showcases premium materials and meticulous craftsmanship, with leather appointments and ergonomic design that was ahead of its time. The steering feel and responsiveness reflect Porsche's commitment to driver engagement, while the suspension geometry provides a refined driving experience suitable for both spirited driving and comfortable cruising.
-    </p>
-  </div>
-  
-  <div class="info-section">
-    <h2>Market Value & Collectibility</h2>
-    <p>
-      The 1969 Porsche 911 Pininfarina B17 has become one of the most sought-after collector cars in the world. With only 12 units produced, this ultra-limited production run has ensured its rarity and desirability. Pristine examples regularly command premium prices at prestigious automotive auctions, with values continuing to appreciate over time.
-    </p>
-    <p>
-      Collectors and enthusiasts worldwide recognize the B17 as a cornerstone of automotive history. Its combination of legendary heritage, exquisite design, and mechanical authenticity makes it an investment-grade collector vehicle. Ownership of a B17 represents membership in an exclusive circle of automotive connoisseurs.
-    </p>
-  </div>
-  
-  <div class="contact">
-    <h2>Get In Touch</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" rows="4" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
-</div>
+    <!-- HISTORIA & SPEC -->
+    <section class="py-24 bg-zinc-900">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-5xl font-semibold mb-10">Unik Porsche-historia</h2>
+                <div class="prose prose-invert text-lg text-zinc-300 space-y-6">
+                    <p>1969 byggde Pininfarina på uppdrag av Porsche denna enda prototyp med förlängd hjulbas (+19 cm) och äkta 2+2-interiör. Bilen målades senare i den ikoniska limegröna färgen och har sedan 1974 funnits i Nisse Nilsson Collection vid Autoseum i Simrishamn.</p>
+                    <p>Den har aldrig serietillverkats och är den enda fabriksbeställda fyrasitsiga 911:an i världen.</p>
+                </div>
+            </div>
 
-<footer>
-  <p>&copy; 2026 Porsche 911 Pininfarina B17 Collector Edition | Historical Documentation</p>
-</footer>
+            <div class="bg-zinc-950 rounded-3xl p-12">
+                <h3 class="text-yellow-400 text-3xl font-medium mb-10">Tekniska specifikationer</h3>
+                <ul class="space-y-6 text-zinc-300">
+                    <li class="flex justify-between border-b border-zinc-800 pb-4"><span class="font-medium">Årsmodell</span><span>1969</span></li>
+                    <li class="flex justify-between border-b border-zinc-800 pb-4"><span class="font-medium">Coachbuilder</span><span>Pininfarina, Italien</span></li>
+                    <li class="flex justify-between border-b border-zinc-800 pb-4"><span class="font-medium">Motor</span><span>2.7L Flat-Six, ca 210 hk</span></li>
+                    <li class="flex justify-between border-b border-zinc-800 pb-4"><span class="font-medium">Växellåda</span><span>5-växlad manuell</span></li>
+                    <li class="flex justify-between border-b border-zinc-800 pb-4"><span class="font-medium">Hjulbas</span><span>Förlängd +19 cm</span></li>
+                    <li class="flex justify-between"><span class="font-medium">Interiör</span><span>Äkta 2+2 med svart skinn</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-</body>
-</html>
+    <!-- VIDEO -->
+    <section class="py-24 bg-black">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-5xl font-semibold text-center mb-12">Bilen i rörelse</h2>
+            <div class="rounded-3xl overflow-hidden shadow-2xl border border-zinc-800">
+                <video controls class="w-full" poster="">
+                    <source src="https://porsche-pininfarina.se/porsche-pininfarina.mp4" type="video/mp4">
+                    Din webbläsare stödjer inte videouppspelning.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section id="kontakt" class="py-28 bg-zinc-950">
+        <div class="max-w-2xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-semibold mb-6">Intresserad av denna unika bil?</h2>
+                <p class="text-xl text-zinc-400">Besiktning sker endast efter överenskommelse. Transport ordnas världen över.</p>
+            </div>
+
+            <div class="bg-zinc-900 rounded-3xl p-12 shadow-2xl">
+                <form action="https://formsubmit.co/din-epost@exempel.se" method="POST" class="space-y-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <input type="text" name="namn" placeholder="Fullständigt namn" required 
+                               class="bg-zinc-800 border border-zinc-700 focus:border-yellow-400 rounded-2xl px-6 py-5 text-lg outline-none transition">
+                        <input type="tel" name="telefon" placeholder="Telefonnummer" required 
+                               class="bg-zinc-800 border border-zinc-700 focus:border-yellow-400 rounded-2xl px-6 py-5 text-lg outline-none transition">
+                    </div>
+                    <input type="email" name="epost" placeholder="E-postadress" required 
+                           class="bg-zinc-800 border border-zinc-700 focus:border-yellow-400 rounded-2xl px-6 py-5 text-lg w-full outline-none transition">
+
+                    <textarea name="meddelande" rows="6" placeholder="Berätta gärna om ditt intresse eller önskad visning..." 
+                              class="bg-zinc-800 border border-zinc-700 focus:border-yellow-400 rounded-3xl px-6 py-5 text-lg w-full outline-none transition"></textarea>
+
+                    <input type="hidden" name="_subject" value="Intresseanmälan Porsche 911 B17 Pininfarina">
+                    <input type="hidden" name="_next" value="https://porsche-pininfarina.se/tack.html">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <button type="submit" 
+                            class="w-full bg-yellow-400 hover:bg-amber-300 text-black font-bold text-2xl py-7 rounded-3xl transition flex items-center justify-center gap-3">
+                        <i class="fas fa-paper-plane"></i> Skicka förfrågan
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="
